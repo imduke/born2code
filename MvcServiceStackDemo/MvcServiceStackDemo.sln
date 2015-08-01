@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcServiceStackDemo", "MvcServiceStackDemo\MvcServiceStackDemo.csproj", "{D6006241-E535-42BE-B15F-FA7E89A47F67}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSiteNewsService", "WebSiteNewsService\WebSiteNewsService.csproj", "{552CDD47-6767-4F96-BFCC-D03DD85F66EA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D6006241-E535-42BE-B15F-FA7E89A47F67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6006241-E535-42BE-B15F-FA7E89A47F67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6006241-E535-42BE-B15F-FA7E89A47F67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{552CDD47-6767-4F96-BFCC-D03DD85F66EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{552CDD47-6767-4F96-BFCC-D03DD85F66EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{552CDD47-6767-4F96-BFCC-D03DD85F66EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{552CDD47-6767-4F96-BFCC-D03DD85F66EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
