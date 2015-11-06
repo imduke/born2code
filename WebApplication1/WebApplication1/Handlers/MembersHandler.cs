@@ -16,6 +16,11 @@ namespace WebApplication1.Handlers
                 dynamic output = null;
                 if (!string.IsNullOrEmpty(context.Request.PathInfo))
                 {
+                    output = GetMemberFriends();
+
+                }
+                else
+                {
                     var memberId = int.Parse(context.Request.PathInfo.Substring(1));
                     output = GetMemberFriends(memberId);
                 }
@@ -27,7 +32,11 @@ namespace WebApplication1.Handlers
         private IEnumerable<Member> GetMemberFriends(int memberId)
         {
             return DomainFacade.GetMemberFriends(memberId);
+        }
 
+        private IEnumerable<Member> GetMemberFriends()
+        {
+            return DomainFacade.GetMemberFriends();
         }
     }
 }

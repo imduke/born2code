@@ -39,9 +39,15 @@ namespace YouVideo.DomainLayer.Managers
             return GetMemberFriendsCore(memberId);
         }
 
+        public IEnumerable<Member> GetMemberFriends()
+        {
+            return GetMemberFriendsCore();
+        }
+
         protected abstract IEnumerable<Video> GetMemberVideosCore(int memberId);
         protected abstract Member AuthenticateMemberCore(string userName, string password);
         protected abstract void NotifyFriendsOfNewVideoCore(int memberId, VideoInfo videoInfo);
         protected abstract IEnumerable<Member> GetMemberFriendsCore(int memberId);
+        protected abstract IEnumerable<Member> GetMemberFriendsCore();
     }
 }

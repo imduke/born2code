@@ -53,6 +53,15 @@ namespace YouVideo.DataLayer
             }            
         }
 
+        protected override IEnumerable<Member> GetMemberFriendsCore()
+        {
+            using (var serviceAgent = MakeServiceAgentHttpClient())
+            {
+                var videosTask = serviceAgent.GetAsync<IEnumerable<Member>>("api/MemberFriends/", new FormDataCollection(""));
+                return videosTask.Result;
+            }
+        }
+
         protected override int CreateVideoRecordCore(int memberId, VideoInfo videoInfo, UploadedFileInfo httpFile, VideoMetadata videoMetadata)
         {
             using (var serviceAgent = MakeServiceAgentHttpClient())

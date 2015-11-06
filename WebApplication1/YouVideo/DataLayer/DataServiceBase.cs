@@ -24,6 +24,11 @@ namespace YouVideo.DataLayer
             return GetMemberFriendsCore(memberId);
         }
 
+        public IEnumerable<Member> GetMemberFriends()
+        {
+            return GetMemberFriendsCore();
+        }
+
         public int CreateVideoRecord(int memberId, VideoInfo videoInfo, UploadedFileInfo httpFile, VideoMetadata videoMetadata)
         {
             return CreateVideoRecordCore(memberId, videoInfo, httpFile, videoMetadata);
@@ -32,6 +37,7 @@ namespace YouVideo.DataLayer
         protected abstract IEnumerable<Video> GetMemberVideosCore(int memberId);
         protected abstract Member GetMemberInfoCore(string userName, string password);
         protected abstract IEnumerable<Member> GetMemberFriendsCore(int memberId);
+        protected abstract IEnumerable<Member> GetMemberFriendsCore();
         protected abstract int CreateVideoRecordCore(int memberId, VideoInfo videoInfo, UploadedFileInfo httpFile, VideoMetadata videoMetadata);
     }
 }

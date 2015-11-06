@@ -59,6 +59,11 @@ namespace YouVideo.DataLayer
                 return new Member[0];
         }
 
+        protected override IEnumerable<Member> GetMemberFriendsCore()
+        {
+                return members;
+        }
+
         protected override int CreateVideoRecordCore(int memberId, VideoInfo videoInfo, UploadedFileInfo httpFile, VideoMetadata videoMetadata)
         {
             if (memberVideos.ContainsKey(memberId))

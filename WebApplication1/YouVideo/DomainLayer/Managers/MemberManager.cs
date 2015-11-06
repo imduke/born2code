@@ -36,5 +36,10 @@ namespace YouVideo.DomainLayer.Managers
         {
             return DataService.GetMemberFriends(memberId);
         }
+
+        protected override IEnumerable<Member> GetMemberFriendsCore()
+        {
+            return DataService.GetMemberFriends();
+        }
     }
 }
